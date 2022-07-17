@@ -99,6 +99,7 @@ jobs:
         find dl -size -1024c -exec rm -f {} \;
 
     - name: Compile the firmware
+      timeout-minutes: 6000
       id: compile
       run: |
         cd openwrt
